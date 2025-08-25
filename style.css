@@ -1,0 +1,779 @@
+/**
+ * =============================================================================
+ * GLOBAL STYLES
+ * =============================================================================
+ *
+ * These rules establish a consistent baseline for the entire application.
+ */
+
+/* Universal box-sizing reset.
+ * This ensures that padding and borders are included in the element's total
+ * width and height, preventing unexpected layout shifts.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles.
+ * Sets the default font for the entire page and removes the default body margin.
+ */
+body {
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+}
+
+
+/**
+ * =============================================================================
+ * SECTION: Main Header / Navbar
+ * =============================================================================
+ *
+ * Styles for the primary site navigation bar that remains fixed at the top.
+ */
+
+/* Main header container.
+ * Uses position: sticky to keep the header at the top of the viewport during scroll.
+ * z-index ensures it stays above other page content.
+ * Flexbox is used for horizontal alignment of its direct children.
+ */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Left section of the header, typically for the logo. */
+.header-left {
+    padding: 13px 10px 10px 10px;
+}
+.header-left img{
+    height: 55px;
+}
+
+/* Navigation links container. */
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+/* Individual navigation links. */
+.header-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    font-size: 13.5px;
+    position: relative; /* Establishes a positioning context for the ::after pseudo-element and child badges. */
+}
+
+/* "NEW" badge for featured navigation links.
+ * Positioned absolutely relative to the parent nav link.
+ */
+.new-badge {
+    color: #ff3f6c;
+    font-size: 10px;
+    vertical-align: top;
+    position: absolute;
+    top: -5px;
+    right: -25px;
+}
+
+/* Right section of the header, containing search and user actions. */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px
+}
+
+/* Container for the search bar and its icon. */
+.search-container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f5f5f6;
+    width: 500px;
+    border: 1px solid #f5f5f6;
+}
+
+/* Search icon button. */
+.search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 12px 18px 10px 10px;
+    cursor: pointer;
+}
+
+.search-btn i {
+    color: #696e79;
+    font-size: 14px;
+}
+
+/* Search input field. */
+.search-input {
+    background-color: transparent;
+    flex-grow: 1; /* Allows the input to take up the remaining space in the flex container. */
+    border: none;
+    padding: 10px 15px 10px 0px; 
+    font-size: 13px;
+    width: 350%; /* A large width to ensure it fills space, managed by flex-grow. */
+}
+
+/* Style for the search container when the input inside it is focused.
+ * This provides a visual cue to the user.
+ */
+.search-container:focus-within {
+    background-color: #ffffff;
+}
+
+/* Removes the default browser outline on the input field when focused. */
+.search-input:focus {
+    outline: none;
+}
+
+/* Container for user-specific action icons (Profile, Wishlist, Bag). */
+.user-actions {
+    margin: 20px;
+    display: flex;
+    gap: 25px;
+}
+
+/* Styling for each individual action item (icon and text).
+ * Flexbox is used for vertical alignment of the icon and its label.
+ */
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.action-item i {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+
+/**
+ * =============================================================================
+ * SECTION: Breadcrumbs
+ * =============================================================================
+ *
+ * Styles for the breadcrumb navigation trail below the main header.
+ */
+
+.category-header {
+  padding: 10px;
+}
+
+/* Breadcrumb list container. */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-top: 10px;
+  list-style: none;
+  margin-bottom: 1rem;
+  font-size: 13.5px;
+}
+
+/* Adds a "/" separator before each breadcrumb item except the first.
+ * This is a common and accessible way to create separators without extra HTML.
+ */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  padding: 0 0.5rem;
+  color: #555;
+}
+
+/* Styling for clickable breadcrumb links. */
+.breadcrumb-item a {
+  color: #283e78;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the current, active page in the breadcrumb trail. */
+.breadcrumb-item.active {
+  color: #283e78;
+  font-weight: bold;
+}
+
+/* Container for the main category title and item count. */
+.category-title {
+  display: flex;
+  align-items: baseline;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  gap: 0.1rem;
+}
+
+.category-title h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #283e78;
+}
+
+/* Styles the item count next to the category title. */
+.category-title .item-count {
+  font-size: 16px;
+  font-weight: normal;
+  color: #878787;
+}
+
+
+/**
+ * =============================================================================
+ * SECTION: Main Content Layout
+ * =============================================================================
+ *
+ * Defines the primary two-column layout for the sidebar and product listing.
+ */
+
+/* Main layout grid.
+ * Creates a two-column layout: a fixed-width 250px column for the sidebar
+ * and a flexible column (1fr) that takes up the remaining space for products.
+ */
+.main-section {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+
+/**
+ * =============================================================================
+ * SECTION: Filters Sidebar
+ * =============================================================================
+ *
+ * Styles for the filter options panel on the left side of the page.
+ */
+
+/* Container for the lower filter groups. */
+.lower-filters {
+    border-right: 1px solid #f0f0f0;
+    max-width: 250px;
+}
+
+/* Sidebar filter header (contains "FILTERS" and "CLEAR ALL"). */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 25px;
+}
+
+.filter-header h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-header .clear-all {
+    color: #ff3f6c;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* A single filter category (e.g., "Brand", "Price"). */
+.filter-group {
+    padding: 20px 0px 15px 25px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Header for a filter group. */
+.filter-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.filter-group-header h4 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Styles the search icon within a filter group header. */
+.filter-group-header i {
+    color: #555;
+    background-color: #f5f5f6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Sticky positioning for the entire sidebar.
+ * `top: 80px` aligns it just below the 80px tall sticky header.
+ * `align-self: start` ensures it sticks to the top of its grid container.
+ */
+.filters-sidebar {
+    position: sticky;
+    top: 80px; 
+    align-self: start; 
+}
+
+/* List of filter options (checkboxes, radio buttons). */
+.filter-list {
+    list-style: none;
+}
+
+.filter-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.filter-list label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #282c3f;
+}
+
+/* Item count displayed next to a filter option. */
+.item-count {
+    color: #94969f;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* "More" link to expand a filter list. */
+.filter-more-link {
+    color: #ff3f6c;
+    text-decoration: none;
+    font-size: 14px;
+    padding-left: 30px;
+}
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * SUB-SECTION: Custom Form Controls (Checkbox & Radio)
+ * -----------------------------------------------------------------------------
+ *
+ * These rules override default browser styles for form elements to create
+ * a consistent, branded appearance.
+ */
+
+/* Custom Checkbox: Base style.
+ * `appearance: none` removes the default browser rendering of the checkbox.
+ * The custom box is then created using width, height, and border properties.
+ */
+.filter-list input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #c6c6c6;
+    border-radius: 2px;
+    margin-right: 12px;
+    margin-left: 0;
+    cursor: pointer;
+    position: relative;
+    top: -1px;
+    flex-shrink: 0; /* Prevents the checkbox from shrinking in the flex container. */
+}
+
+/* Custom Checkbox: Checked state.
+ * Changes the background and border color when the checkbox is selected.
+ */
+.filter-list input[type="checkbox"]:checked {
+    background-color: #ff3f6c;
+    border-color: #ff3f6c;
+}
+
+/* Custom Checkbox: Checkmark icon.
+ * A checkmark icon (from Font Awesome) is added using the ::after pseudo-element
+ * only when the checkbox is in its :checked state.
+ */
+.filter-list input[type="checkbox"]:checked::after {
+    content: '\f00c'; /* Font Awesome checkmark Unicode. */
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", FontAwesome;
+    font-weight: 900;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centers the icon perfectly. */
+    font-size: 12px;
+}
+
+/* Custom Radio Button: Base style.
+ * `appearance: none` removes the default browser styling.
+ * A circular shape is created using border-radius: 50%.
+ */
+.filter-list input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    top: -1px;
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+}
+
+/* Custom Radio Button: Inner dot (hidden by default).
+ * The inner dot is created using the ::before pseudo-element and is scaled to 0.
+ */
+.filter-list input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff3f6c;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out; /* Smooth animation for the dot's appearance. */
+}
+
+/* Custom Radio Button: Inner dot (visible when checked).
+ * The inner dot is scaled to its full size when the radio button is selected.
+ */
+.filter-list input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+/* Custom Radio Button: Checked state border. */
+.filter-list input[type="radio"]:checked {
+    border-color: #ff3f6c;
+}
+
+
+/* Styling for color swatches in the color filter group. */
+.color-swatch {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.discount li{
+  font-size: 12px;
+}
+
+.filter-list {
+  padding-left: 10px;
+}
+
+
+/**
+ * =============================================================================
+ * SECTION: Sort and Filter Bar
+ * =============================================================================
+ *
+ * Styles for the horizontal bar above the product grid, containing sorting
+ * and additional filtering options.
+ */
+
+/* Main container for the sort bar. */
+.sort-and-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px 7px 35px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #eaeaec;
+}
+
+/* Containers for the left (filters) and right (sort) sections. */
+.filter-options,
+.sort-options {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Base styles for all buttons in the bar. */
+.dropdown-btn, .more-filters-btn {
+    font-family: 'Assistant', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Styling for the dropdown-style filter buttons on the left. */
+.filter-options .dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Chevron icon on the filter dropdowns. */
+.filter-options .dropdown-btn i {
+    font-size: 10px;
+}
+
+/* The "+ X more" button. */
+.more-filters-btn {
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: #282c3f;
+}
+
+/* "Sort By" dropdown container on the right. */
+.sort-by {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #d4d5d9;
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 250px;
+}
+
+/* Text styles within the sort dropdown. */
+.sort-by span {
+    color: #696e79;
+}
+.sort-by strong {
+    color: #282c3f;
+    font-weight: 700;
+}
+
+/* Icon style for the sort dropdown. */
+.sort-by i {
+    font-size: 12px;
+    color: #282c3f;
+}
+
+
+/**
+ * =============================================================================
+ * SECTION: Product Grid & Cards
+ * =============================================================================
+ *
+ * Styles for the responsive grid of product cards.
+ */
+
+/* Product grid container.
+ * `grid-template-columns: repeat(auto-fill, minmax(210px, 1fr))` creates a
+ * responsive grid that automatically fits as many 210px+ columns as possible,
+ * without needing media queries.
+ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 40px 40px;
+    padding: 24px 15px 24px 20px;
+}
+
+/* Individual product card. */
+.product-card {
+    background-color: #fff;
+    font-family: 'Assistant', sans-serif;
+    transition: box-shadow 0.3s ease;
+    text-align: left;
+}
+
+/* Adds a subtle shadow on hover to lift the card off the page. */
+.product-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Container for the product image.
+ * `position: relative` is necessary for positioning child elements like badges.
+ */
+.product-image-container {
+    position: relative;
+    overflow: hidden; /* Hides parts of child elements that extend beyond its bounds. */
+}
+
+.product-card img {
+    width: 100%;
+    display: block; /* Removes the small gap below the image. */
+}
+
+/* "WISHLIST" button overlay.
+ * It's hidden by default by being positioned completely below the container
+ * (`transform: translateY(100%)`) and made invisible.
+ */
+.wishlist-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2;
+}
+
+/* Reveals the wishlist overlay on product card hover.
+ * The overlay smoothly transitions into view from the bottom.
+ */
+.product-card:hover .wishlist-overlay {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Wishlist button styling. */
+.wishlist-btn {
+    background: none;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wishlist-btn:hover {
+    border-color: #333;
+}
+
+/* Rating badge positioned at the bottom-left of the image. */
+.rating-badge {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 1;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.rating-badge .fa-star {
+    font-size: 11px;
+    color: #f5c414;
+}
+
+/* "NEW" badge positioned at the top-left of the image. */
+.badge-new {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #ff3f6c;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+/* Container for textual product information below the image. */
+.product-info {
+    padding: 12px 0;
+}
+
+/* Styles for the product brand name.
+ * `text-overflow: ellipsis` will show "..." if the text is too long to fit.
+ */
+.product-brand {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Styles for the product's short description. */
+.product-description {
+    font-size: 14px;
+    color: #535665;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Container for pricing information. */
+.product-price {
+    display: flex;
+    align-items: baseline;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* Current (discounted) price. */
+.price-current {
+    color: #282c3f;
+}
+
+/* Original price (with a strikethrough). */
+.price-original {
+    text-decoration: line-through;
+    color: #7e818c;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Discount percentage text. */
+.price-discount {
+    color: #ff905a;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* "Only Few Left" stock information. */
+.stock-info {
+    color: #d09600;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 6px;
+}
