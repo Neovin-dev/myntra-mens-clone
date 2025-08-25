@@ -30,7 +30,4 @@ myntra-mens-clone/
     └── myntra-shirt-images/
     ├── myntra-logo.png
 ```
-
----
-
-icons/
+---co
