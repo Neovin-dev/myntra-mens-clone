@@ -22,6 +22,12 @@
 body {
     font-family: 'Assistant', sans-serif;
     margin: 0;
+    
+}
+
+.container {
+    width: 100%;
+    margin: 0;
 }
 
 
@@ -30,7 +36,7 @@ body {
  * SECTION: Main Header / Navbar
  * =============================================================================
  *
- * Styles for the primary site navigation bar that remains fixed at the top.
+ * Styles for the primary site navigation bar that remains fixed at the top. (for Desktop Version)
  */
 
 /* Main header container.
@@ -38,10 +44,18 @@ body {
  * z-index ensures it stays above other page content.
  * Flexbox is used for horizontal alignment of its direct children.
  */
+
+ .mobile-category-title, .mobile-category-items{
+    display: none;
+
+ }
+
 .main-header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000;  
+    width: 100%;
+    /* z-index is 1000 so that it overlays every element even in future */
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -51,7 +65,11 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Left section of the header, typically for the logo. */
+
+.header-back-arrow {
+    display: none;
+}
+/* Left section of the header, logo. */
 .header-left {
     padding: 13px 10px 10px 10px;
 }
@@ -63,15 +81,17 @@ body {
 .header-nav {
     display: flex;
     gap: 30px;
+    margin: 0px 35px 0px 15px;
 }
 
 /* Individual navigation links. */
 .header-nav a {
-    text-decoration: none;
+    text-decoration: none; 
     color: #333;
     font-weight: bolder;
     font-size: 13.5px;
-    position: relative; /* Establishes a positioning context for the ::after pseudo-element and child badges. */
+    position: relative; 
+    /* Establishes a positioning context for the ::after pseudo-element and child badges. otherwise this will break the design by assigning new relative to the body*/
 }
 
 /* "NEW" badge for featured navigation links.
@@ -86,12 +106,6 @@ body {
     right: -25px;
 }
 
-/* Right section of the header, containing search and user actions. */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 25px
-}
 
 /* Container for the search bar and its icon. */
 .search-container {
@@ -103,6 +117,13 @@ body {
     background-color: #f5f5f6;
     width: 500px;
     border: 1px solid #f5f5f6;
+}
+
+/* Right section of the header, containing search and user actions. */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px
 }
 
 /* Search icon button. */
@@ -121,11 +142,11 @@ body {
 /* Search input field. */
 .search-input {
     background-color: transparent;
-    flex-grow: 1; /* Allows the input to take up the remaining space in the flex container. */
+    flex-grow: 1;
     border: none;
     padding: 10px 15px 10px 0px; 
     font-size: 13px;
-    width: 350%; /* A large width to ensure it fills space, managed by flex-grow. */
+    width: 350%;
 }
 
 /* Style for the search container when the input inside it is focused.
@@ -237,7 +258,6 @@ body {
   color: #878787;
 }
 
-
 /**
  * =============================================================================
  * SECTION: Main Content Layout
@@ -254,7 +274,6 @@ body {
     display: grid;
     grid-template-columns: 250px 1fr;
 }
-
 
 /**
  * =============================================================================
@@ -294,7 +313,7 @@ body {
 
 /* A single filter category (e.g., "Brand", "Price"). */
 .filter-group {
-    padding: 20px 0px 15px 25px;
+    padding: 20px 7px 15px 25px;
     border-top: 1px solid #f0f0f0;
 }
 
@@ -384,6 +403,7 @@ body {
  * `appearance: none` removes the default browser rendering of the checkbox.
  * The custom box is then created using width, height, and border properties.
  */
+ 
 .filter-list input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -396,7 +416,7 @@ body {
     cursor: pointer;
     position: relative;
     top: -1px;
-    flex-shrink: 0; /* Prevents the checkbox from shrinking in the flex container. */
+    flex-shrink: 0;
 }
 
 /* Custom Checkbox: Checked state.
@@ -419,7 +439,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Centers the icon perfectly. */
+    transform: translate(-50%, -50%);
     font-size: 12px;
 }
 
@@ -487,7 +507,6 @@ body {
   padding-left: 10px;
 }
 
-
 /**
  * =============================================================================
  * SECTION: Sort and Filter Bar
@@ -501,6 +520,7 @@ body {
 .sort-and-filter-bar {
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
     align-items: center;
     padding: 7px 20px 7px 35px;
     margin-bottom: 0px;
@@ -514,6 +534,7 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -550,31 +571,71 @@ body {
     color: #282c3f;
 }
 
-/* "Sort By" dropdown container on the right. */
+/* Container to position the dropdown relative to the button */
+.sort-dropdown-container {
+    position: relative;
+}
+
+/* Base style for the "Sort by" button */
 .sort-by {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
     border: 1px solid #d4d5d9;
-    border-radius: 4px;
     padding: 8px 12px;
     width: 250px;
+
+    transition: border-radius 0.1s ease, border-color 0.1s ease;
 }
 
-/* Text styles within the sort dropdown. */
-.sort-by span {
-    color: #696e79;
-}
-.sort-by strong {
-    color: #282c3f;
-    font-weight: 700;
+
+/* The dropdown menu itself */
+.sort-dropdown-menu {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0; 
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; 
+    
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    border: 1px solid #d4d5d9;
+    border-top: none;
+    
+    z-index: 10;
+    
+    /* Hiding/Showing Logic */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
-/* Icon style for the sort dropdown. */
+/* When you hover the container, the menu appears */
+.sort-dropdown-container:hover .sort-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
 .sort-by i {
-    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+/* Styling for each link inside the dropdown */
+.sort-dropdown-menu li a {
     color: #282c3f;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.sort-dropdown-menu li a:hover {
+    background-color: #f5f5f6;
 }
 
 
@@ -621,12 +682,12 @@ body {
  */
 .product-image-container {
     position: relative;
-    overflow: hidden; /* Hides parts of child elements that extend beyond its bounds. */
+    overflow: hidden; 
 }
 
 .product-card img {
     width: 100%;
-    display: block; /* Removes the small gap below the image. */
+    display: block; 
 }
 
 /* "WISHLIST" button overlay.
@@ -663,7 +724,6 @@ body {
     border: 1px solid #aaa;
     border-radius: 4px;
     padding: 8px 16px;
-    font-family: 'Assistant', sans-serif;
     font-weight: 700;
     font-size: 13px;
     color: #333;
@@ -718,7 +778,6 @@ body {
 }
 
 /* Styles for the product brand name.
- * `text-overflow: ellipsis` will show "..." if the text is too long to fit.
  */
 .product-brand {
     font-size: 16px;
@@ -776,4 +835,336 @@ body {
     font-size: 11px;
     font-weight: 700;
     margin-top: 6px;
+}
+
+
+/* Main container for the pagination elements */
+.pagination-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 10px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 25px;
+}
+
+/* Common styles for all list items */
+.pagination-container li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Styling for the 'Next' and 'Previous' buttons */
+.pagination-prev,
+.pagination-next {
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect for the enabled 'Next' button */
+.pagination-next:not(.pagination-disabled):hover {
+    background-color: #f0f0f0;
+}
+
+/* Styles for any disabled element */
+.pagination-disabled {
+    color: #aaa;
+    cursor: not-allowed; 
+}
+
+/* Specific border color for disabled buttons */
+.pagination-prev.pagination-disabled {
+    border-color: #eee;
+}
+
+/* Creating the left arrow/chevron with CSS */
+.pagination-arrowLeft::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #aaa;
+    border-left: 2px solid #aaa;
+    transform: rotate(-45deg);
+    margin-right: 8px;
+}
+
+/* Creating the right arrow/chevron with CSS */
+.pagination-arrowRight::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #555;
+    border-right: 2px solid #555;
+    transform: rotate(45deg);
+    margin-left: 8px;
+}
+
+.mobile-search-container {
+    display: none;
+}
+
+/**
+ * =============================================================================
+ * SECTION: Responsive Styles (Mobile)
+ * =============================================================================
+ *
+ * These rules adapt the layout for smaller screens, typically tablets and phones.
+ * We are using a max-width of 768px as our primary breakpoint.
+ */
+
+@media (max-width: 500px) {
+    .header-nav,
+    .search-container,
+    .wishlist-btn,
+    .wishlist-overlay,
+    .user-actions span {
+        display: none;
+    }
+    
+    .main-header {
+        padding: 0 15px; 
+        height: 70px;
+    }
+
+    .header-back-arrow {
+        display: block;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .mobile-back-arrow {
+        display: inline-block;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .mobile-category-title {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        color: #282c3f;
+        flex-grow: 1; /* Allows it to take available space */
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 10px; /* Spacing between logo and icons */
+    }
+
+    .mobile-category-items {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #3c4ea8;
+        flex-grow: 1;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 10px; 
+    }
+
+    .mobile-search-container {
+        display: block;
+    }
+
+    .header-right {
+        gap: 0; 
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .action-item-profile {
+        display: none;
+    }
+
+    #mobile-actions {
+        display: flex; /* Show mobile action icons */
+    }
+
+    .header-left img{
+        height: 30px;
+    }
+    
+    .header-right {
+        gap: 15px; 
+    }
+
+    .action-item i {
+        font-size: 15px; 
+    }
+
+    .category-header {
+        display: none;
+    }
+
+    /* --- Main Layout: Stack Filters and Products --- */
+    .main-section {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        display: none;
+    }
+    
+    .product-listing {
+        padding: 0;
+    }
+
+    /* --- Hide Desktop Sort/Filter Bar --- */
+    .sort-and-filter-bar {
+        display: none;
+    }
+    
+    /* --- Adjust Product Grid --- */
+    .product-grid {
+        /* 2-column layout */
+        grid-template-columns: 1fr 1fr;
+        gap: 2px 4px;
+        padding: 2px;
+    }
+    
+    .product-brand {
+        font-size: 14px;
+    }
+
+    .product-description {
+        font-size: 12px;
+    }
+
+    /* --- Pagination --- */
+    .pagination-container {
+        display: none;
+    }
+    .pagination-paginationMeta {
+        display: none;
+    }
+}
+
+/**
+ * =============================================================================
+ * SECTION: Mobile-Specific UI (Sort & Filter)
+ * =============================================================================
+ */
+
+/* --- Mobile Sort/Filter Bar --- */
+.mobile-sort-filter-bar {
+    display: none;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    z-index: 900;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.mobile-sort-filter-bar button {
+    width: 50%;
+    padding: 15px 0;
+    border: none;
+    background: none;
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-weight: 650;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Add a vertical separator */
+.mobile-sort-btn {
+    border-right: 1px solid #e0e0e0;
+}
+
+/* --- Bottom Sheet for Sorting --- */
+.sort-bottom-sheet {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+}
+
+/* Make it active with a class */
+.sort-bottom-sheet.active {
+    display: block;
+}
+
+.sheet-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.sheet-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 15px;
+    transform: translateY(100%);
+    animation: slideUp 0.3s ease forwards;
+}
+
+.sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 15px;
+}
+.sheet-header h4 {
+    font-size: 5px;
+    margin: 0;
+}
+
+.close-sheet-btn {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sort-options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sort-options-list li label {
+    display: block;
+    padding: 12px 5px;
+    font-size: 16px;
+    color: #333;
+}
+.sort-options-list input[type="radio"] {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .mobile-sort-filter-bar {
+        display: flex;
+    }
 }

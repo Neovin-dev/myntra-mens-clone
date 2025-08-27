@@ -16,12 +16,24 @@
 
     <header class="main-header">
         <!-- Header Left containing logo -->
+
+        <div class="header-back-arrow">
+            <a href="/profile" class="action-item">
+                <i class="fa-solid fa-arrow-left" style="color: #000000;"></i>
+            </a>
+        </div>
         <div class="header-left">
             <a href="/">
                 <img src="images/logo-favicon/image.png" alt="Myntra Logo">
             </a>
         </div>
         
+        <div class="mobile header">
+            <h1 class="mobile-category-title">Casual Shirts for Men</h1>
+            <span class="mobile-category-items">- 177849 items</span>
+        </div>
+
+
         <!-- Header middle - Categories 6 sections-->
         <nav class="header-nav">
             <a href="/men">MEN</a>
@@ -42,7 +54,10 @@
                 <input type="text" placeholder="Search for products, brands and more" class="search-input">
             </div>
             <div class="user-actions">
-                <a href="/profile" class="action-item">
+                <a href="/search-btn" class="action-item mobile-search-container">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                </a>
+                <a href="/profile" class="action-item action-item-profile">
                     <i class="fa-regular fa-user" style="color: #000000;"></i>
                     <span>Profile</span>
                 </a>
@@ -59,931 +74,1003 @@
          </div>
         </header>
 <!-- ---------------------------------------------------------------------------- -->
-    <main class="container">
+    <main>
+        <div  class="container">
 
-        <section class="category-header">
+            <section class="category-header">
 
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Clothing</a></li>
-            <li class="breadcrumb-item"><a href="#">Shirts</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Casual Shirts for Men</li>
-            </ol>
-        </nav>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Clothing</a></li>
+                    <li class="breadcrumb-item"><a href="#">Shirts</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Casual Shirts for Men</li>
+                    </ol>
+                </nav>
 
-        <div class="category-title">
-            <h1>Casual Shirts for Men</h1>
-            <span class="item-count">- 177849 items</span>
-        </div>
-
-<!-- ---------------------------------------------------------------------------- -->
-
-        </section>
-
-            <section class="main-section">
-                <aside class="filters-sidebar">
-                    <div class="filter-header">
-                        <h3>FILTERS</h3>
-                        <a href="#" class="clear-all">CLEAR ALL</a>
-                    </div>
-                    <div class="lower-filters">
-                        <div class="filter-group">
-                            <div class="filter-group-header">
-                                <h4>BRAND</h4>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <ul class="filter-list">
-                                <li>
-                                    <input type="checkbox" id="brand1" name="brand1">
-                                    <label for="brand1">HIGHLANDER <span class="item-count">(7225)</span></label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="brand2" name="brand2">
-                                    <label for="brand2">Roadster <span class="item-count">(4874)</span></label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="brand3" name="brand3">
-                                    <label for="brand3">Campus Sutra <span class="item-count">(4003)</span></label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="brand4" name="brand4">
-                                    <label for="brand1">Mast & Harbour <span class="item-count">(3366)</span></label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="brand5" name="brand5">
-                                    <label for="brand2">Snitch <span class="item-count">(3332)</span></label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="brand6" name="brand6">
-                                    <label for="brand3">Louis Philippe Sport <span class="item-count">(3303)</span></label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="brand5" name="brand5">
-                                    <label for="brand2">Crimsoune Club <span class="item-count">(3181)</span></label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="brand6" name="brand6">
-                                    <label for="brand3">Allen Solly <span class="item-count">(3040)</span></label>
-                                </li>                        
-                            </ul>
-                            <a href="#" class="filter-more-link">+ 1141 more</a>
-                        </div>
-
-                        <div class="filter-group">
-                            <div class="filter-group-header">
-                                <h4>PRICE</h4>
-                            </div>
-                            <div class="price-slider-placeholder">
-                                <p>₹100 - ₹10,100+</p>
-                            </div>
-                        </div>
-
-                        <div class="filter-group">
-                            <div class="filter-group-header">
-                                <h4>COLOR</h4>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                                <ul class="filter-list">
-
-                                    <li>
-                                        <input type="checkbox" id="colorBlue">
-                                        <label for="colorBlue">
-                                            <span class="color-swatch" style="background-color: #0074d9;"></span>
-                                            Blue <span class="item-count">(535)</span>
-                                        </label>
-                                    </li>
-
-                                    <li>
-                                        <input type="checkbox" id="colorWhite">
-                                        <label for="colorWhite">
-                                            <span class="color-swatch" style="background-color: #ffffff; border: 1px solid #ccc;"></span>
-                                            White <span class="item-count">(466)</span>
-                                        </label>
-                                    </li>
-
-                                    <li>
-                                        <input type="checkbox" id="colorGreen">
-                                        <label for="colorGreen">
-                                            <span class="color-swatch" style="background-color: #2ecc71;"></span>
-                                            Green <span class="item-count">(319)</span>
-                                        </label>
-                                    </li>
-
-                                    <li>
-                                        <input type="checkbox" id="colorBlack">
-                                        <label for="colorBlack">
-                                            <span class="color-swatch" style="background-color: #111111;"></span>
-                                            Black <span class="item-count">(236)</span>
-                                        </label>
-                                    </li>
-
-                                    <li>
-                                        <input type="checkbox" id="colorGrey">
-                                        <label for="colorGrey">
-                                            <span class="color-swatch" style="background-color: #aaaaaa;"></span>
-                                            Grey <span class="item-count">(235)</span>
-                                        </label>
-                                    </li>
-
-                                    <li>
-                                        <input type="checkbox" id="colorNavy">
-                                        <label for="colorNavy">
-                                            <span class="color-swatch" style="background-color: #001f3f;"></span>
-                                            Navy Blue <span class="item-count">(224)</span>
-                                        </label>
-                                    </li>
-
-                                    <li>
-                                        <input type="checkbox" id="colorBeige">
-                                        <label for="colorBeige">
-                                            <span class="color-swatch" style="background-color: #f5f5dc; border: 1px solid #ccc;"></span>
-                                            Beige <span class="item-count">(176)</span>
-                                        </label>
-                                    </li>
-
-                                </ul>
-                            <a href="#" class="filter-more-link" >+ 43 more</a>
-                        </div>
-
-                        <div class="filter-group">
-                            <div class="filter-group-header">
-                                <h4>DISCOUNT RANGE</h4>
-                            </div>
-                            <ul class="filter-list">
-                                <li>
-                                    <input type="radio" id="discount10" name="discount_range">
-                                    <label for="discount10">10% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount20" name="discount_range">
-                                    <label for="discount20">20% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount30" name="discount_range">
-                                    <label for="discount30">30% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount40" name="discount_range">
-                                    <label for="discount40">40% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount50" name="discount_range">
-                                    <label for="discount50">50% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount60" name="discount_range">
-                                    <label for="discount60">60% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount70" name="discount_range">
-                                    <label for="discount70">70% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount80" name="discount_range">
-                                    <label for="discount80">80% and above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="discount90" name="discount_range">
-                                    <label for="discount90">90% and above</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-
-                <section class="product-listing">
-
-                    <div class="sort-and-filter-bar">
-                        <div class="filter-options">
-                            <button class="dropdown-btn">Add-Ons <i class="fa-solid fa-chevron-down"></i></button>
-                            <button class="dropdown-btn">Bundles <i class="fa-solid fa-chevron-down"></i></button>
-                            <button class="dropdown-btn">Collar <i class="fa-solid fa-chevron-down"></i></button>
-                            <button class="dropdown-btn">Country of Origin <i class="fa-solid fa-chevron-down"></i></button>
-                            <button class="dropdown-btn">Fabrics <i class="fa-solid fa-chevron-down"></i></button>
-                            <button class="dropdown-btn">Fashion Trends <i class="fa-solid fa-chevron-down"></i></button>
-                            <button class="dropdown-btn">Features <i class="fa-solid fa-chevron-down"></i></button>
-                            <button class="more-filters-btn">+ 21 more</button>
-                        </div>
-
-                        <div class="sort-options">
-                            <button class="dropdown-btn sort-by">
-                                <span>Sort by: <strong>Recommended</strong></span>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-grid">
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <div class="badge-new">NEW</div>
-                                    <img src="images/myntra-shirt-images/casual-shirt-1.jpg" alt="Cotton Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">United Colors of Benetton</h3>
-                                    <p class="product-description">Cotton Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2999</span>
-                                    </div>
-                                    <div class="stock-info">Only Few Left!</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-2.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-3.jpg" alt="Men Cotton Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Men Cotton Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 531</span>
-                                        <span class="price-original">Rs. 1399</span>
-                                        <span class="price-discount">(62% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-4.jpg" alt="Slim Fit Checked Flannel Shirt">
-                                    <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">THE BEAR HOUSE</h3>
-                                    <p class="product-description">Slim Fit Checked Flannel Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 923</span>
-                                        <span class="price-original">Rs. 2495</span>
-                                        <span class="price-discount">(63% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-5.jpg" alt="Abstract Printed Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Abstract Printed Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 524</span>
-                                        <span class="price-original">Rs. 1499</span>
-                                        <span class="price-discount">(65% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-6.jpg" alt="Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-7.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <div class="badge-new">NEW</div>
-                                    <img src="images/myntra-shirt-images/casual-shirt-8.jpg" alt="Cotton Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">United Colors of Benetton</h3>
-                                    <p class="product-description">Cotton Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2999</span>
-                                    </div>
-                                    <div class="stock-info">Only Few Left!</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-9.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-10.jpg" alt="Men Cotton Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Men Cotton Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 531</span>
-                                        <span class="price-original">Rs. 1399</span>
-                                        <span class="price-discount">(62% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-11.jpg" alt="Slim Fit Checked Flannel Shirt">
-                                    <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">THE BEAR HOUSE</h3>
-                                    <p class="product-description">Slim Fit Checked Flannel Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 923</span>
-                                        <span class="price-original">Rs. 2495</span>
-                                        <span class="price-discount">(63% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-12.jpg" alt="Abstract Printed Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Abstract Printed Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 524</span>
-                                        <span class="price-original">Rs. 1499</span>
-                                        <span class="price-discount">(65% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-13.jpg" alt="Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-14.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <div class="badge-new">NEW</div>
-                                    <img src="images/myntra-shirt-images/casual-shirt-15.jpg" alt="Cotton Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">United Colors of Benetton</h3>
-                                    <p class="product-description">Cotton Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2999</span>
-                                    </div>
-                                    <div class="stock-info">Only Few Left!</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-16.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-17.jpg" alt="Men Cotton Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Men Cotton Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 531</span>
-                                        <span class="price-original">Rs. 1399</span>
-                                        <span class="price-discount">(62% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-18.jpg" alt="Slim Fit Checked Flannel Shirt">
-                                    <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">THE BEAR HOUSE</h3>
-                                    <p class="product-description">Slim Fit Checked Flannel Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 923</span>
-                                        <span class="price-original">Rs. 2495</span>
-                                        <span class="price-discount">(63% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-5.jpg" alt="Abstract Printed Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Abstract Printed Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 524</span>
-                                        <span class="price-original">Rs. 1499</span>
-                                        <span class="price-discount">(65% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-6.jpg" alt="Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-7.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <div class="badge-new">NEW</div>
-                                    <img src="images/myntra-shirt-images/casual-shirt-8.jpg" alt="Cotton Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">United Colors of Benetton</h3>
-                                    <p class="product-description">Cotton Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2999</span>
-                                    </div>
-                                    <div class="stock-info">Only Few Left!</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-9.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-10.jpg" alt="Men Cotton Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Men Cotton Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 531</span>
-                                        <span class="price-original">Rs. 1399</span>
-                                        <span class="price-discount">(62% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-11.jpg" alt="Slim Fit Checked Flannel Shirt">
-                                    <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">THE BEAR HOUSE</h3>
-                                    <p class="product-description">Slim Fit Checked Flannel Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 923</span>
-                                        <span class="price-original">Rs. 2495</span>
-                                        <span class="price-discount">(63% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-12.jpg" alt="Abstract Printed Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Abstract Printed Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 524</span>
-                                        <span class="price-original">Rs. 1499</span>
-                                        <span class="price-discount">(65% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-13.jpg" alt="Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-14.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-13.jpg" alt="Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-14.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <div class="badge-new">NEW</div>
-                                    <img src="images/myntra-shirt-images/casual-shirt-15.jpg" alt="Cotton Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">United Colors of Benetton</h3>
-                                    <p class="product-description">Cotton Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2999</span>
-                                    </div>
-                                    <div class="stock-info">Only Few Left!</div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-16.jpg" alt="Men Slim Fit Striped Linen Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">WROGN</h3>
-                                    <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 2599</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-17.jpg" alt="Men Cotton Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Men Cotton Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 531</span>
-                                        <span class="price-original">Rs. 1399</span>
-                                        <span class="price-discount">(62% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-18.jpg" alt="Slim Fit Checked Flannel Shirt">
-                                    <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">THE BEAR HOUSE</h3>
-                                    <p class="product-description">Slim Fit Checked Flannel Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 923</span>
-                                        <span class="price-original">Rs. 2495</span>
-                                        <span class="price-discount">(63% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="product-card">
-                            <a href="#">
-                                <div class="product-image-container">
-                                    <img src="images/myntra-shirt-images/casual-shirt-5.jpg" alt="Abstract Printed Casual Shirt">
-                                    <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
-                                    <div class="wishlist-overlay">
-                                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-brand">Roadster</h3>
-                                    <p class="product-description">Abstract Printed Casual Shirt</p>
-                                    <div class="product-price">
-                                        <span class="price-current">Rs. 524</span>
-                                        <span class="price-original">Rs. 1499</span>
-                                        <span class="price-discount">(65% OFF)</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
+                <div class="category-title">
+                    <h1>Casual Shirts for Men</h1>
+                    <span class="item-count">- 177849 items</span>
+                </div>
             </section>
+    <!-- ---------------------------------------------------------------------------- -->
+
+                <section class="main-section">
+                    <aside class="filters-sidebar">
+                        <div class="filter-header">
+                            <h3>FILTERS</h3>
+                            <a href="#" class="clear-all">CLEAR ALL</a>
+                        </div>
+                        <div class="lower-filters">
+                            <div class="filter-group">
+                                <div class="filter-group-header">
+                                    <h4>BRAND</h4>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <ul class="filter-list">
+                                    <li>
+                                        <input type="checkbox" id="brand1" name="brand1">
+                                        <label for="brand1">HIGHLANDER <span class="item-count">(7225)</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand2" name="brand2">
+                                        <label for="brand2">Roadster <span class="item-count">(4874)</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand3" name="brand3">
+                                        <label for="brand3">Campus Sutra <span class="item-count">(4003)</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand4" name="brand4">
+                                        <label for="brand1">Mast & Harbour <span class="item-count">(3366)</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand5" name="brand5">
+                                        <label for="brand2">Snitch <span class="item-count">(3332)</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand6" name="brand6">
+                                        <label for="brand3">Louis Philippe Sport <span class="item-count">(3303)</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand5" name="brand5">
+                                        <label for="brand2">Crimsoune Club <span class="item-count">(3181)</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand6" name="brand6">
+                                        <label for="brand3">Allen Solly <span class="item-count">(3040)</span></label>
+                                    </li>                        
+                                </ul>
+                                <a href="#" class="filter-more-link">+ 1141 more</a>
+                            </div>
+
+                            <div class="filter-group">
+                                <div class="filter-group-header">
+                                    <h4>PRICE</h4>
+                                </div>
+                                <div class="price-slider-placeholder">
+                                    <p>₹100 - ₹10,100+</p>
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <div class="filter-group-header">
+                                    <h4>COLOR</h4>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                    <ul class="filter-list">
+
+                                        <li>
+                                            <input type="checkbox" id="colorBlue">
+                                            <label for="colorBlue">
+                                                <span class="color-swatch" style="background-color: #0074d9;"></span>
+                                                Blue <span class="item-count">(535)</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="colorWhite">
+                                            <label for="colorWhite">
+                                                <span class="color-swatch" style="background-color: #ffffff; border: 1px solid #ccc;"></span>
+                                                White <span class="item-count">(466)</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="colorGreen">
+                                            <label for="colorGreen">
+                                                <span class="color-swatch" style="background-color: #2ecc71;"></span>
+                                                Green <span class="item-count">(319)</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="colorBlack">
+                                            <label for="colorBlack">
+                                                <span class="color-swatch" style="background-color: #111111;"></span>
+                                                Black <span class="item-count">(236)</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="colorGrey">
+                                            <label for="colorGrey">
+                                                <span class="color-swatch" style="background-color: #aaaaaa;"></span>
+                                                Grey <span class="item-count">(235)</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="colorNavy">
+                                            <label for="colorNavy">
+                                                <span class="color-swatch" style="background-color: #001f3f;"></span>
+                                                Navy Blue <span class="item-count">(224)</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="colorBeige">
+                                            <label for="colorBeige">
+                                                <span class="color-swatch" style="background-color: #f5f5dc; border: 1px solid #ccc;"></span>
+                                                Beige <span class="item-count">(176)</span>
+                                            </label>
+                                        </li>
+
+                                    </ul>
+                                <a href="#" class="filter-more-link" >+ 43 more</a>
+                            </div>
+
+                            <div class="filter-group">
+                                <div class="filter-group-header">
+                                    <h4>DISCOUNT RANGE</h4>
+                                </div>
+                                <ul class="filter-list">
+                                    <li>
+                                        <input type="radio" id="discount10" name="discount_range">
+                                        <label for="discount10">10% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount20" name="discount_range">
+                                        <label for="discount20">20% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount30" name="discount_range">
+                                        <label for="discount30">30% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount40" name="discount_range">
+                                        <label for="discount40">40% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount50" name="discount_range">
+                                        <label for="discount50">50% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount60" name="discount_range">
+                                        <label for="discount60">60% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount70" name="discount_range">
+                                        <label for="discount70">70% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount80" name="discount_range">
+                                        <label for="discount80">80% and above</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="discount90" name="discount_range">
+                                        <label for="discount90">90% and above</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <section class="product-listing">
+
+                        <div class="sort-and-filter-bar">
+                            <div class="filter-options">
+                                <button class="dropdown-btn">Add-Ons <i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="dropdown-btn">Bundles <i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="dropdown-btn">Collar <i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="dropdown-btn">Country of Origin <i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="dropdown-btn">Fabrics <i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="dropdown-btn">Fashion Trends <i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="dropdown-btn">Features <i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="more-filters-btn">+ 21 more</button>
+                            </div>
+
+                            <div class="sort-dropdown-container">
+                                <button class="dropdown-btn sort-by" id="sortByBtn">
+                                    <span>Sort by: <strong>Recommended</strong></span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+
+                                <ul class="sort-dropdown-menu" id="sortMenu">
+                                    <li><a href="#" class="active">Recommended</a></li>
+                                    <li><a href="#">What's New</a></li>
+                                    <li><a href="#">Popularity</a></li>
+                                    <li><a href="#">Better Discount</a></li>
+                                    <li><a href="#">Price: High to Low</a></li>
+                                    <li><a href="#">Price: Low to High</a></li>
+                                    <li><a href="#">Customer Rating</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product-grid">
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <div class="badge-new">NEW</div>
+                                        <img src="images/myntra-shirt-images/casual-shirt-1.jpg" alt="Cotton Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">United Colors of Benetton</h3>
+                                        <p class="product-description">Cotton Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2999</span>
+                                        </div>
+                                        <div class="stock-info">Only Few Left!</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-2.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-3.jpg" alt="Men Cotton Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Men Cotton Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 531</span>
+                                            <span class="price-original">Rs. 1399</span>
+                                            <span class="price-discount">(62% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-4.jpg" alt="Slim Fit Checked Flannel Shirt">
+                                        <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">THE BEAR HOUSE</h3>
+                                        <p class="product-description">Slim Fit Checked Flannel Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 923</span>
+                                            <span class="price-original">Rs. 2495</span>
+                                            <span class="price-discount">(63% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-5.jpg" alt="Abstract Printed Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Abstract Printed Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 524</span>
+                                            <span class="price-original">Rs. 1499</span>
+                                            <span class="price-discount">(65% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-6.jpg" alt="Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-7.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <div class="badge-new">NEW</div>
+                                        <img src="images/myntra-shirt-images/casual-shirt-8.jpg" alt="Cotton Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">United Colors of Benetton</h3>
+                                        <p class="product-description">Cotton Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2999</span>
+                                        </div>
+                                        <div class="stock-info">Only Few Left!</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-9.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-10.jpg" alt="Men Cotton Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Men Cotton Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 531</span>
+                                            <span class="price-original">Rs. 1399</span>
+                                            <span class="price-discount">(62% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-11.jpg" alt="Slim Fit Checked Flannel Shirt">
+                                        <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">THE BEAR HOUSE</h3>
+                                        <p class="product-description">Slim Fit Checked Flannel Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 923</span>
+                                            <span class="price-original">Rs. 2495</span>
+                                            <span class="price-discount">(63% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-12.jpg" alt="Abstract Printed Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Abstract Printed Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 524</span>
+                                            <span class="price-original">Rs. 1499</span>
+                                            <span class="price-discount">(65% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-13.jpg" alt="Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-14.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <div class="badge-new">NEW</div>
+                                        <img src="images/myntra-shirt-images/casual-shirt-15.jpg" alt="Cotton Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">United Colors of Benetton</h3>
+                                        <p class="product-description">Cotton Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2999</span>
+                                        </div>
+                                        <div class="stock-info">Only Few Left!</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-16.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-17.jpg" alt="Men Cotton Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Men Cotton Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 531</span>
+                                            <span class="price-original">Rs. 1399</span>
+                                            <span class="price-discount">(62% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-18.jpg" alt="Slim Fit Checked Flannel Shirt">
+                                        <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">THE BEAR HOUSE</h3>
+                                        <p class="product-description">Slim Fit Checked Flannel Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 923</span>
+                                            <span class="price-original">Rs. 2495</span>
+                                            <span class="price-discount">(63% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-5.jpg" alt="Abstract Printed Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Abstract Printed Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 524</span>
+                                            <span class="price-original">Rs. 1499</span>
+                                            <span class="price-discount">(65% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-6.jpg" alt="Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-7.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <div class="badge-new">NEW</div>
+                                        <img src="images/myntra-shirt-images/casual-shirt-8.jpg" alt="Cotton Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">United Colors of Benetton</h3>
+                                        <p class="product-description">Cotton Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2999</span>
+                                        </div>
+                                        <div class="stock-info">Only Few Left!</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-9.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-10.jpg" alt="Men Cotton Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Men Cotton Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 531</span>
+                                            <span class="price-original">Rs. 1399</span>
+                                            <span class="price-discount">(62% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-11.jpg" alt="Slim Fit Checked Flannel Shirt">
+                                        <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">THE BEAR HOUSE</h3>
+                                        <p class="product-description">Slim Fit Checked Flannel Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 923</span>
+                                            <span class="price-original">Rs. 2495</span>
+                                            <span class="price-discount">(63% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-12.jpg" alt="Abstract Printed Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Abstract Printed Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 524</span>
+                                            <span class="price-original">Rs. 1499</span>
+                                            <span class="price-discount">(65% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-13.jpg" alt="Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-14.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-13.jpg" alt="Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-14.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <div class="badge-new">NEW</div>
+                                        <img src="images/myntra-shirt-images/casual-shirt-15.jpg" alt="Cotton Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">United Colors of Benetton</h3>
+                                        <p class="product-description">Cotton Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2999</span>
+                                        </div>
+                                        <div class="stock-info">Only Few Left!</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-16.jpg" alt="Men Slim Fit Striped Linen Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">WROGN</h3>
+                                        <p class="product-description">Men Slim Fit Striped Linen Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 2599</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-17.jpg" alt="Men Cotton Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 17.9k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Men Cotton Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 531</span>
+                                            <span class="price-original">Rs. 1399</span>
+                                            <span class="price-discount">(62% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-18.jpg" alt="Slim Fit Checked Flannel Shirt">
+                                        <div class="rating-badge">4.3 <i class="fa-solid fa-star"></i> | 3.8k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">THE BEAR HOUSE</h3>
+                                        <p class="product-description">Slim Fit Checked Flannel Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 923</span>
+                                            <span class="price-original">Rs. 2495</span>
+                                            <span class="price-discount">(63% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-card">
+                                <a href="#">
+                                    <div class="product-image-container">
+                                        <img src="images/myntra-shirt-images/casual-shirt-5.jpg" alt="Abstract Printed Casual Shirt">
+                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
+                                        <div class="wishlist-overlay">
+                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-brand">Roadster</h3>
+                                        <p class="product-description">Abstract Printed Casual Shirt</p>
+                                        <div class="product-price">
+                                            <span class="price-current">Rs. 524</span>
+                                            <span class="price-original">Rs. 1499</span>
+                                            <span class="price-discount">(65% OFF)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+
+                    <div class="results-showMoreContainer">
+                        <ul class="pagination-container">
+                            <li class="pagination-page-indicator pagination-disabled">
+                                &lt;&lt; Page 1
+                            </li>
+
+                            <li class="pagination-prev pagination-disabled">
+                                <span class="pagination-arrowLeft"></span>
+                                Previous
+                            </li>
+
+                            <li class="pagination-paginationMeta">Page 1 of 3562</li>
+
+                            <li class="pagination-next">
+                                Next
+                                <span class="pagination-arrowRight"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+        </div>
     </main>
 
+    <div class="mobile-sort-filter-bar">
+    <button class="mobile-sort-btn">
+        <i class="fa-solid fa-sort"></i> SORT
+    </button>
+    <button class="mobile-filter-btn">
+        <i class="fa-solid fa-filter"></i> FILTER
+    </button>
+</div>
+
+
+<div class="sort-bottom-sheet" id="sort-sheet">
+    <div class="sheet-overlay"></div>
+    <div class="sheet-content">
+        <div class="sheet-header">
+            <h4>SORT BY</h4>
+            <button class="close-sheet-btn" id="close-sort-sheet">&times;</button>
+        </div>
+        <ul class="sort-options-list">
+            <li><label><input type="radio" name="mobile_sort" value="recommended" checked> <i class="fa-regular fa-thumbs-up"></i> Recommended</label></li>
+            
+            <li><label><input type="radio" name="mobile_sort" value="new"> <i class="fa-regular fa-star"></i> What's New</label></li>
+            <li><label><input type="radio" name="mobile_sort" value="popularity"> <i class="fa-solid fa-fire-flame-curved"></i> Popularity</label></li>
+            <li><label><input type="radio" name="mobile_sort" value="discount"> <i class="fa-solid fa-percent"></i> Better Discount</label></li> 
+            <li><label><input type="radio" name="mobile_sort" value="price_high"> <i class="fa-solid fa-indian-rupee-sign"></i> Price: High to Low</label></li>
+            <li><label><input type="radio" name="mobile_sort" value="price_low"> <i class="fa-solid fa-indian-rupee-sign"></i> Price: Low to High</label></li>
+        </ul>
+    </div>
+</div>
+
+    <!-- <div class="mobile-search-page" id="mobileSearchOverlay">
+    <div class="mobile-search-header">
+        <button class="back-btn" id="closeSearchBtn"><i class="fa-solid fa-arrow-left"></i></button>
+        <input type="text" class="mobile-search-input" placeholder="Search for brands & products">
+        <button class="mobile-search-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div class="mobile-search-body">
+    </div> -->
+    
+</div>
+
 </body>
+
 </html>
