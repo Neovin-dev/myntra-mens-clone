@@ -1,0 +1,26 @@
+/**
+ * =============================================================================
+ * 1-BASE.CSS
+ * =============================================================================
+ *
+ * These rules establish a consistent baseline for the entire application.
+ * Includes box-sizing reset and base body styles.
+ */
+
+/* Universal box-sizing reset. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles. */
+body {
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+}

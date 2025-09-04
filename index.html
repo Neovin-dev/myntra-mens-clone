@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
+
 <body>
 
     <header class="main-header">
@@ -30,7 +31,7 @@
         
         <div class="mobile header">
             <h1 class="mobile-category-title">Casual Shirts for Men</h1>
-            <span class="mobile-category-items">- 177849 items</span>
+            <span class="mobile-category-items"> 177849 items</span>
         </div>
 
 
@@ -78,7 +79,11 @@
         <div  class="container">
 
             <section class="category-header">
-
+                
+                <div class="banner-text-tab">
+                    <h1>upto 200 off</h1>
+                    <span>myntrasave</span>
+                </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -983,27 +988,6 @@
                                     </div>
                                 </a>
                             </div>
-
-                            <div class="product-card">
-                                <a href="#">
-                                    <div class="product-image-container">
-                                        <img src="images/myntra-shirt-images/casual-shirt-5.jpg" alt="Abstract Printed Casual Shirt">
-                                        <div class="rating-badge">4.2 <i class="fa-solid fa-star"></i> | 2.3k</div>
-                                        <div class="wishlist-overlay">
-                                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h3 class="product-brand">Roadster</h3>
-                                        <p class="product-description">Abstract Printed Casual Shirt</p>
-                                        <div class="product-price">
-                                            <span class="price-current">Rs. 524</span>
-                                            <span class="price-original">Rs. 1499</span>
-                                            <span class="price-discount">(65% OFF)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
                             
                         </div>
 
@@ -1032,45 +1016,142 @@
     </main>
 
     <div class="mobile-sort-filter-bar">
-    <button class="mobile-sort-btn">
-        <i class="fa-solid fa-sort"></i> SORT
-    </button>
-    <button class="mobile-filter-btn">
-        <i class="fa-solid fa-filter"></i> FILTER
-    </button>
-</div>
+        <button class="mobile-sort-btn">
+            <i class="fa-solid fa-sort"></i> SORT
+        </button>
+        <button class="mobile-filter-btn">
+            <i class="fa-solid fa-filter"></i> FILTER
+        </button>
+    </div>
 
-
-<div class="sort-bottom-sheet" id="sort-sheet">
-    <div class="sheet-overlay"></div>
-    <div class="sheet-content">
-        <div class="sheet-header">
-            <h4>SORT BY</h4>
-            <button class="close-sheet-btn" id="close-sort-sheet">&times;</button>
+    <div class="sort-bottom-sheet" id="sort-sheet">
+        <div class="sheet-overlay"></div>
+        <div class="sheet-content">
+            <div class="sheet-header">
+                <h4>SORT BY</h4>
+            </div>
+            <ul class="sort-options-list">
+                <li>
+                    <label>
+                        <input type="radio" name="mobile_sort" value="popularity" checked> 
+                        <i class="fa-solid fa-fire-flame-curved"></i> Popularity
+                    </label>
+                </li>
+                <li><label><input type="radio" name="mobile_sort" value="latest"> <i class="fa-regular fa-star"></i> Latest</label></li>
+                <li><label><input type="radio" name="mobile_sort" value="discount"> <i class="fa-solid fa-tags"></i> Discount</label></li>
+                <li><label><input type="radio" name="mobile_sort" value="price_high"> <i class="fa-solid fa-arrow-down-wide-short"></i> Price: High to Low</label></li>
+                <li><label><input type="radio" name="mobile_sort" value="price_low"> <i class="fa-solid fa-arrow-up-wide-short"></i> Price: Low to High</label></li>
+                <li><label><input type="radio" name="mobile_sort" value="rating"> <i class="fa-regular fa-star"></i> Customer Rating</label></li>
+            </ul>
         </div>
-        <ul class="sort-options-list">
-            <li><label><input type="radio" name="mobile_sort" value="recommended" checked> <i class="fa-regular fa-thumbs-up"></i> Recommended</label></li>
-            
-            <li><label><input type="radio" name="mobile_sort" value="new"> <i class="fa-regular fa-star"></i> What's New</label></li>
-            <li><label><input type="radio" name="mobile_sort" value="popularity"> <i class="fa-solid fa-fire-flame-curved"></i> Popularity</label></li>
-            <li><label><input type="radio" name="mobile_sort" value="discount"> <i class="fa-solid fa-percent"></i> Better Discount</label></li> 
-            <li><label><input type="radio" name="mobile_sort" value="price_high"> <i class="fa-solid fa-indian-rupee-sign"></i> Price: High to Low</label></li>
-            <li><label><input type="radio" name="mobile_sort" value="price_low"> <i class="fa-solid fa-indian-rupee-sign"></i> Price: Low to High</label></li>
-        </ul>
     </div>
-</div>
 
-    <!-- <div class="mobile-search-page" id="mobileSearchOverlay">
-    <div class="mobile-search-header">
-        <button class="back-btn" id="closeSearchBtn"><i class="fa-solid fa-arrow-left"></i></button>
-        <input type="text" class="mobile-search-input" placeholder="Search for brands & products">
-        <button class="mobile-search-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+    <div class="filter-page" id="filter-page">
+        <div class="filter-page-header">
+            <h3>FILTERS</h3>
+        </div>
+        <div class="filter-page-content">
+            <aside class="filter-categories">
+                <ul>
+                    <li><a href="#">Size</a></li>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Color</a></li>
+                    <li><a href="#">Discount Range</a></li>
+                    <li class="active"><a href="#">Shirts</a></li>
+                    <li><a href="#">Bundles</a></li>
+                    <li><a href="#">Country of Origin</a></li>
+                    <li><a href="#">Rating</a></li>
+                    <li><a href="#">Fabrics</a></li>
+                    </ul>
+            </aside>
+            <main class="filter-options">
+                <!-- <div class="filter-options-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search by Size">
+                </div>
+                <ul class="filter-options-list">
+                    <li>
+                        <label><input type="checkbox" name="size" value="48"> 48</label>
+                        <span class="item-count">18600</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="49"> 49</label>
+                        <span class="item-count">735</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="50"> 50</label>
+                        <span class="item-count">8164</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="51"> 51</label>
+                        <span class="item-count">448</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="52"> 52</label>
+                        <span class="item-count">5377</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="54"> 54</label>
+                        <span class="item-count">3873</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="56"> 56</label>
+                        <span class="item-count">1028</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="58"> 58</label>
+                        <span class="item-count">554</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="60"> 60</label>
+                        <span class="item-count">218</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="62"> 62</label>
+                        <span class="item-count">116</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="64"> 64</label>
+                        <span class="item-count">62</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="66"> 66</label>
+                        <span class="item-count">39</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="68"> 68</label>
+                        <span class="item-count">12</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="Onesize"> Onesize</label>
+                        <span class="item-count">14</span>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="size" value="Customise"> Customise</label>
+                        <span class="item-count">28</span>
+                    </li>
+                </ul> -->
+            </main>
+        </div>
+        <div class="filter-page-footer">
+            <button class="close-filter-btn">CLOSE</button>
+            <button class="apply-filter-btn">APPLY</button>
+        </div>
     </div>
-    <div class="mobile-search-body">
-    </div> -->
-    
-</div>
 
+
+    <div class="mobile-search-page" id="mobileSearchOverlay">
+        <div class="mobile-search-header">
+            <button class="back-btn" id="closeSearchBtn"><i class="fa-solid fa-arrow-left"></i></button>
+            <input type="text" class="mobile-search-input" placeholder="Search for brands & products">
+            <button class="mobile-search-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="mobile-search-body">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>

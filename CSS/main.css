@@ -1,0 +1,11 @@
+/**
+ * =============================================================================
+ * MAIN STYLESHEET
+ * =============================================================================
+ * This file imports all other CSS modules in the correct order.
+ */
+
+@import url('1-base.css');       /* Global resets, body styles */
+@import url('2-layout.css');      /* Main page structure (header, grid) */
+@import url('3-components.css');  /* Individual components (cards, forms, etc.) */
+@import url('4-mobile.css');      /* All responsive and mobile-only styles */
