@@ -346,16 +346,29 @@
     gap: 20px 25px;
     padding: 24px 20px 0px 15px;
 }
+
+.banner-text-tab, .mobile-search-container .mobile-product-brand .product-brand {
+    display: none;
+}
+
 .product-card {
+    position: relative;
     width: 210px;
     justify-self: center;
     background-color: #fff;
     transition: box-shadow 0.3s ease;
     text-align: left;
 }
+
 .product-card:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
+
+.product-card:hover .mobile-wishlist-btn {
+    transform: translateY(10px); 
+}
+
+
 .product-card a {
     text-decoration: none;
     color: inherit;
@@ -369,6 +382,16 @@
     width: 100%;
     display: block;
 }
+
+.product-card:hover .product-brand,
+.product-card:hover .product-description {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s linear;
+}
+
+
+
 .wishlist-overlay {
     position: absolute;
     bottom: 0;
@@ -403,6 +426,21 @@
 .wishlist-btn:hover {
     border-color: #333;
 }
+
+.wishlist-icon-container {
+    color: #282c3f;
+    display: inline-block;
+    position: absolute;
+    bottom: 43px;
+    right: 0;
+    top: 2px;
+    padding-top: 4px;
+    padding-left: 15px;
+    height: 38px;
+}
+
+
+
 .fa-heart {
     font-size: 16px;
 }
@@ -437,6 +475,8 @@
     z-index: 1;
 }
 .product-info {
+    position: relative;
+    min-height: 85px;
     margin-top: 12px;
     padding: 0px 10px;
 }
@@ -499,6 +539,27 @@
     margin-top: 6px;
 }
 
+.product-info::before {
+
+    content: 'Size: 42';
+    position: absolute;
+    top: 15px;
+    left: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #282c3f;
+
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.product-card:hover .product-info::before {
+    opacity: 1;
+}
+
+/* ======================================================= */
 /* --- Pagination --- */
 .pagination-container {
     display: flex;
@@ -555,19 +616,4 @@
     margin-left: 8px;
 }
 
-/* Initially hidden mobile elements */
-.banner-text-tab, .mobile-search-container {
-    display: none;
-}
 
-.wishlist-icon-container {
-    color: #282c3f;
-    display: inline-block;
-    position: absolute;
-    bottom: 43px;
-    right: 0;
-    top: 2px;
-    padding-top: 4px;
-    padding-left: 15px;
-    height: 38px;
-}
