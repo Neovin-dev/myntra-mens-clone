@@ -76,7 +76,21 @@
     }
 
     .product-info {
-        padding: 15px 7px;
+        margin: 0;
+        padding: 8px 0px 8px 8px;
+    }
+
+    .product-card {
+        width: fit-content;
+    }
+
+    .product {
+        display: none;
+    }
+
+    .mobile-product-brand {
+    display: flex;
+    justify-content: space-between;
     }
 
     .header-right {
@@ -123,7 +137,7 @@
     
     .product-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 2px;
+        gap: 0px;
         padding: 0.5px;
     }
     
@@ -250,9 +264,7 @@
     color: #ff3f6c;
     font-weight: 700;
 }
-
-/* --- SECTION: Filter Page (Full Screen Overlay) --- */
-/* --- 1. Main Overlay Container --- */
+/* --- Filter Page Structure --- */
 .filter-page {
     display: none;
     position: fixed;
@@ -269,34 +281,30 @@
     display: flex;
 }
 
-
-/* ---  Header --- */
 .filter-page-header {
     flex-shrink: 0;
     padding: 20px;
-    border-bottom: 1px solid #f0f0f0;
-    text-align: center;
+    border-bottom: 1px solid #eaeaec; /* MODIFIED: Slightly darker border */
+    font-weight: 700;
 }
 
 .filter-page-header h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     margin: 0;
     color: #282c3f;
+    text-transform: uppercase;
 }
 
-
-/* --- Main Content Area (Two Columns) --- */
 .filter-page-content {
     display: flex;
     flex-grow: 1;
     overflow: hidden;
 }
 
-
-/* ---  Left Sidebar (Categories) --- */
+/* --- Left Sidebar (Categories) --- */
 aside.filter-categories {
-    width: 140px;
+    width: 160px;
     flex-shrink: 0; 
     background-color: #f5f5f6;
     overflow-y: auto;
@@ -310,56 +318,128 @@ aside.filter-categories {
 
 .filter-categories li a {
     display: block;
-    padding: 15px 12px;
+    padding: 15px 20px;
     text-decoration: none;
-    color: #333;
+    color: #282c3f;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
-.filter-categories li.active {
+#shirt-active {
+    font-size: 12px;
     background-color: #94969f;
+    color: white;
+    font-weight: 700;
+    padding: 8px 0px 8px 20px ;
 }
 
 .filter-categories li.active a {
-    color: #ffffff;
     font-weight: 700;
 }
 
+#category-size {
+    background-color: white;
+    font-weight: bold;
+}
+
+/* --- Right Column (Filter Options) --- */
+main.filter-options {
+    flex-grow: 1;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 0px;
+}
+
+/* --- Search Bar Styling --- */
+.filter-options-search {
+    width: 100%;
+    position: relative;
+    padding: 15px 0;
+}
+
+.filter-options-search .fa-magnifying-glass {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94969f;
+}
+
+.filter-options-search input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #eaeaec;        /* CORRECTED: Lighter border */
+    border-radius: 4px;
+    background-color: #f5f5f6;      /* CORRECTED: Light grey background */
+    font-size: 14px;
+    outline: none;
+}
+
+/* --- List of Options Styling (Accordion Style) --- */
+.filter-options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.filter-options-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5px;
+    border-bottom: 1px solid #eaeaec; /* MODIFIED: Consistent border color */
+}
+
+.filter-item-label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #282c3f;
+}
+
+.chevron-icon {
+    stroke: #94969f;
+}
+
+.item-count {
+    color: #94969f;
+    font-size: 14px;
+}
+
+/* --- Footer & CORRECTED BUTTONS --- */
 .filter-page-footer {
     display: flex;
-    position: sticky;
-    bottom: 0;
-    padding: 3px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
     width: 100%;
     background-color: #ffffff;
-    border-top: 1px solid #e0e0e0;
-    z-index: 900;
+    border-top: 1px solid #eaeaec; /* MODIFIED: Consistent border color */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
 }
 
 .filter-page-footer button {
-    width: 50%;
+    background-color: transparent;
+    border: none;
     padding: 12px;
-    border-radius: 2px;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
     text-transform: uppercase;
-    border: 1px solid transparent;
 }
 
-.close-filter-btn, .apply-filter-btn {
-    background-color: #ffffff;
-    border-color: #d4d5d9;
+.close-filter-btn {
     color: #282c3f;
 }
 
 .apply-filter-btn {
-
-    color: #ff3f6c;
+    color: #d53c48; /* CORRECTED: Accurate red color from image */
 }
-
-
 /* --- Search Page (Full Screen) --- */
 .mobile-search-page {
     display: none;
@@ -419,5 +499,39 @@ aside.filter-categories {
 @media (max-width: 768px) {
     .mobile-sort-filter-bar {
         display: flex;
+    }
+}
+
+/* --- Add this at the end of your CSS file --- */
+
+/* This is a hypothetical class for your main navbar container */
+/* Make sure your main container has these properties */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Media query for tablets and mobile devices */
+@media (max-width: 768px) {
+
+    /* Make the main container stack its items */
+    .navbar-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Adjust gap for vertical layout */
+    }
+
+    /* Make the user actions and search bar take up more space */
+    .user-actions, .search-container {
+        width: 100%; /* Make them full-width */
+        margin: 10px 0; /* Adjust vertical margin */
+        justify-content: center;
+    }
+
+    /* Optionally hide navigation links or move them to a hamburger menu */
+    .header-nav {
+        /* You would typically hide this and show a menu icon instead */
+        display: none; 
     }
 }

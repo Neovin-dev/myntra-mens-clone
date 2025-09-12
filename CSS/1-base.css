@@ -16,7 +16,7 @@
 
 /* Base body styles. */
 body {
-    font-family: 'Assistant', sans-serif;
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
 }
 

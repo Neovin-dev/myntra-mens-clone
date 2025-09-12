@@ -33,7 +33,7 @@
 .header-nav {
     display: flex;
     gap: 30px;
-    margin: 0px 35px 0px 15px;
+    margin: 0px 35px 0px 25px;
 }
 
 .header-right {
@@ -61,7 +61,7 @@
     margin-top: 10px;
     list-style: none;
     margin-bottom: 1rem;
-    font-size: 13.5px;
+    font-size: 14px;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -71,14 +71,14 @@
 }
 
 .breadcrumb-item a {
-    color: #283e78;
+    color: #282c3f;
     text-decoration: none;
 }
 .breadcrumb-item a:hover {
     text-decoration: underline;
 }
 .breadcrumb-item.active {
-    color: #283e78;
+    color: #282c3f;
     font-weight: bold;
 }
 
@@ -93,7 +93,7 @@
     margin: 0;
     font-size: 16px;
     font-weight: bold;
-    color: #283e78;
+    color: #282c3f;
 }
 .category-title .item-count {
     font-size: 16px;
