@@ -149,6 +149,19 @@
         font-size: 12px;
     }
 
+    .rating-badge {
+        border-radius: 20px;;
+    }
+
+    .mobile-wishlist-btn {
+        font-size: initial;
+        border: none; 
+        background: none; 
+        padding: 0;
+        padding-right: 2px; 
+        cursor: pointer;
+    }
+
     .pagination-container,
     .pagination-paginationMeta {
         display: none;
@@ -284,7 +297,7 @@
 .filter-page-header {
     flex-shrink: 0;
     padding: 20px;
-    border-bottom: 1px solid #eaeaec; /* MODIFIED: Slightly darker border */
+    border-bottom: 1px solid #eaeaec;
     font-weight: 700;
 }
 
@@ -370,9 +383,9 @@ main.filter-options {
 .filter-options-search input {
     width: 100%;
     padding: 12px 15px 12px 45px;
-    border: 1px solid #eaeaec;        /* CORRECTED: Lighter border */
+    border: 1px solid #eaeaec;
     border-radius: 4px;
-    background-color: #f5f5f6;      /* CORRECTED: Light grey background */
+    background-color: #f5f5f6;
     font-size: 14px;
     outline: none;
 }
@@ -391,7 +404,7 @@ main.filter-options {
     justify-content: space-between;
     align-items: center;
     padding: 18px 5px;
-    border-bottom: 1px solid #eaeaec; /* MODIFIED: Consistent border color */
+    border-bottom: 1px solid #eaeaec;
 }
 
 .filter-item-label {
@@ -419,7 +432,7 @@ main.filter-options {
     padding: 10px 0;
     width: 100%;
     background-color: #ffffff;
-    border-top: 1px solid #eaeaec; /* MODIFIED: Consistent border color */
+    border-top: 1px solid #eaeaec;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
 }
 
@@ -438,7 +451,7 @@ main.filter-options {
 }
 
 .apply-filter-btn {
-    color: #d53c48; /* CORRECTED: Accurate red color from image */
+    color: #d53c48;
 }
 /* --- Search Page (Full Screen) --- */
 .mobile-search-page {
@@ -502,10 +515,6 @@ main.filter-options {
     }
 }
 
-/* --- Add this at the end of your CSS file --- */
-
-/* This is a hypothetical class for your main navbar container */
-/* Make sure your main container has these properties */
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -513,25 +522,22 @@ main.filter-options {
     padding: 10px 20px;
 }
 
-/* Media query for tablets and mobile devices */
+
 @media (max-width: 768px) {
 
-    /* Make the main container stack its items */
     .navbar-container {
-        flex-direction: column; /* Stack items vertically */
-        gap: 15px; /* Adjust gap for vertical layout */
+        flex-direction: column; 
+        gap: 15px; 
     }
 
-    /* Make the user actions and search bar take up more space */
     .user-actions, .search-container {
-        width: 100%; /* Make them full-width */
-        margin: 10px 0; /* Adjust vertical margin */
+        width: 100%;
+        margin: 10px 0; 
         justify-content: center;
     }
 
-    /* Optionally hide navigation links or move them to a hamburger menu */
     .header-nav {
-        /* You would typically hide this and show a menu icon instead */
         display: none; 
     }
 }
+
